@@ -1,0 +1,34 @@
+//PROGRAM TO FIND BINARYSERACH USING FUNCTIONS//
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	int arr[]={1,2,3,4,5,6,7,8,9};
+	int mid,n,sind,eind;
+	void Binarysearch(int[],int,int,int,int);
+	int len=sizeof(arr)/sizeof(int);
+	printf("Enter the number to be searched:\n");
+	scanf("%d",&n);
+	sind=0;
+	eind=len-1;
+Binarysearch(arr,sind,eind,n,mid);
+}
+	void Binarysearch(int arr[],int sind,int eind,int n,int mid)
+{
+	while(sind<=eind)
+	{
+		 mid=(sind+eind)/2;
+		printf("\nMid location and mid value is: %d,%d",mid,arr[mid]);
+		if(arr[mid]==n)
+		{
+			printf("\n%d is found at Location %d",n,mid);
+			break;
+		}
+		if(arr[mid]>n)
+		eind=mid-1;
+		else
+		sind=mid+1;
+	
+}
+	}
+	
